@@ -33,11 +33,8 @@
            remote="yocto" />
 
   <!-- YOUR CUSTOM LAYER (Example) -->
-  <!-- Uncomment this when you have uploaded your layer to GitHub
-  <project name="<YOUR_USERNAME>/meta-myinterview"
-           path="sources/meta-myinterview"
+  <project name="glicklic/demo_app"
+           path="sources/demo_app"
            remote="github"
            revision="main" />
-  -->
-
 </manifest>
