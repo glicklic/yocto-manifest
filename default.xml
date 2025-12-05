@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- 1. REMOTES: Where do we download code from? -->
+  <remote name="yocto"
+          fetch="git://git.yoctoproject.org" />
+  <remote name="openembedded"
+          fetch="git://git.openembedded.org" />
+  <remote name="github"
+          fetch="ssh://git@github.com" />
+
+  <!-- 2. DEFAULTS: If a project doesn't specify details, use these. -->
+  <default revision="scarthgap"
+           remote="yocto"
+           sync-j="4" />
+
+  <!-- 3. PROJECTS: The actual layers we want to download -->
+
+  <!-- POKY (The Build System) -->
+  <!-- path: Where it lands on your disk -->
+  <project name="poky"
+           path="sources/poky"
+           remote="yocto" />
+
+  <!-- META-OPENEMBEDDED (Community Layers) -->
+  <project name="meta-openembedded"
+           path="sources/meta-openembedded"
+           remote="openembedded" />
+
+  <!-- META-RASPBERRYPI (Hardware Support) -->
+  <project name="meta-raspberrypi"
+           path="sources/meta-raspberrypi"
+           remote="yocto" />
+
+  <!-- YOUR CUSTOM LAYER (Example) -->
+  <!-- Uncomment this when you have uploaded your layer to GitHub
+  <project name="<YOUR_USERNAME>/meta-myinterview"
+           path="sources/meta-myinterview"
+           remote="github"
+           revision="main" />
+  -->
+
+</manifest>
